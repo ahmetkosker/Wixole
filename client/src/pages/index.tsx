@@ -1,3 +1,10 @@
+import axios from "axios";
+import RegisterForm from "../components/RegisterForm";
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <RegisterForm />
+    </div>
+  );
 }
