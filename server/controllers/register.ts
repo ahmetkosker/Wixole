@@ -1,17 +1,14 @@
 import { Request, Response } from "express";
 import User, { IUser } from "../models/user";
+import createToken from "../functions/createToken";
 
 const register = async (req: Request, res: Response) => {
-  try {
-    const user = await User.create(<IUser>{
-      name: "Ahmet",
-      surname: "Köşker",
-      email: "exarons@gmail.com",
-    });
-    console.log(user);
-  } catch (err) {
-    console.log(err);
-  }
+  console.log(
+    createToken(
+      "163",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvbmN0IjoiNDUxMjQwNDgzNjEiLCJpYXQiOjE1MTYyMzkwMjJ9.ydgg00D7UwrYsdXPbKrzLQHUrW4oPWtt1Chb6zQ5RCA"
+    )
+  );
 };
 
 export default register;

@@ -16,7 +16,7 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
-app.use("/register", register);
+app.post("/register", register);
 
 mongoose
   .connect(process.env.CONNECTION_URL!, {
